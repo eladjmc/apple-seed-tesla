@@ -147,17 +147,21 @@ section .bottom-section-one-container{
     align-items: center;
     flex-flow: column nowrap;
     justify-content: flex-end;
+    padding-left: 20px;
 }
 section .bottom-section-one-container .info-buy-container{
     width: 764px;
     height: 54px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-left: 20px;
+    font-family: Gotham ;
+    line-height: 28px;
 }
 
 .tcl-badge-speedometer__dial {
-    height: 20px;
+    height: 21px;
     width: 40px;
     position: relative;
 }
@@ -167,7 +171,7 @@ section .bottom-section-one-container .info-buy-container{
     left: 5px;
     bottom: 0;
     width: 30px;
-    height: 15px;
+    height: 19px;
     color: #eeeeee;
 
 }
@@ -187,8 +191,6 @@ section .bottom-section-one-container .info-buy-container{
     transform: translateZ(0) rotate(90deg);
     transform-origin: center bottom;
     transition: transform 1.733s cubic-bezier(.77,0,.175,1) .2s,-webkit-transform 1.733s cubic-bezier(.77,0,.175,1) .4s;
-
-
 }
 
 .speedometer-wrapper {
@@ -199,11 +201,14 @@ section .bottom-section-one-container .info-buy-container{
 }
 
 .speedometer-wrapper  span{
-    font-size: 32px;
+    font-size: 28px;
 }
 
 .description-text { 
     font-size: 12px;
+    letter-spacing: 1px;
+    font-family: GothamThin;
+    font-weight: 900;
 }
 .mph-info{
     display: flex;
@@ -218,7 +223,7 @@ section .bottom-section-one-container .info-buy-container{
     text-align: center;
 }
 .range-wrapper span.range-number {
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .motor-wrapper{
@@ -232,11 +237,12 @@ section .bottom-section-one-container .info-buy-container{
 }
 
 .buy-now-button{
-    width: 200px;
+    width: 201px;
     border: 3px #fff solid;
     border-radius: 5px;
     text-align: center;
-    padding: 6px 24px;
+    padding: 0 24px;
+    padding-top: 3px;
     height: 40px;
     margin-right: 8px;
     text-decoration: none;
@@ -247,3 +253,32 @@ section .bottom-section-one-container .info-buy-container{
     color: #000;
 }
 
+.down-button-container{
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+ .down-button-container button{
+    background: transparent;
+    border: none;
+    position: relative;
+    animation-name: upDown;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+ }
+
+ @keyframes upDown {
+    0%   { bottom:0px;}
+    25%  { bottom:3px;}
+    50%  { bottom:2px;}
+    75%  { bottom:6px;}
+    100% { bottom:1px;}
+  }
+
+ .down-button-container button img{
+    width: 27px;
+    filter: brightness(10);
+ }
