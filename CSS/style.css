@@ -4,6 +4,10 @@
   src: url("/assets/fonts/Gotham\ Book.otf");
 }
 @font-face {
+  font-family: GothamLight;
+  src: url("/assets/fonts/Gotham\ Light.otf");
+}
+@font-face {
   font-family: GothamBold;
   src: url("/assets/fonts/Gotham\ Medium.otf");
 }
@@ -35,6 +39,7 @@ nav {
   position: fixed;
   top: 0;
   padding: 0 32px;
+  z-index: 10;
 }
 
 a {
@@ -83,9 +88,21 @@ section.section-one {
 }
 
 .section-two {
-  color: #fff;
+  color: #000;
+
   width: 100%;
-  height: 800px;
+  height: 100vh;
+  font-family: GothamThin;
+  z-index: 20;
+  position: relative;
+  display: flex;
+  /* justify-content: end; */
+}
+.section-two .image-content{
+    background: url("/assets/images/model-3-page-2.jpeg") no-repeat center
+    center/cover;
+    width: 72.5%;
+    height: 100%;
 }
 
 section.section-one h1 {
@@ -115,170 +132,213 @@ section.section-one p a {
   border-bottom: 1px solid #fff;
 }
 section.section-one p a:hover {
-    border-bottom: 2px solid #fff
+  border-bottom: 2px solid #fff;
 }
 
 .sticky-message {
-    cursor: pointer;
-    height: 56.8px;
-    width: 57px;
-    border-radius: 60%;
-    position: fixed;
-    right: 29.3px;
-    bottom: 78.5px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-   justify-content: space-around;
-   box-shadow: 0 1.5px 0.7px 0 #c1c0c0, 0 1.5px 0.7px 0 #D3D3D3;
-   z-index: 100;
-
+  cursor: pointer;
+  height: 56.8px;
+  width: 57px;
+  border-radius: 60%;
+  position: fixed;
+  right: 29.3px;
+  bottom: 78.5px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 1.5px 0.7px 0 #c1c0c0, 0 1.5px 0.7px 0 #d3d3d3;
+  z-index: 100;
 }
 
 .sticky-message svg {
- width: 30px;
- height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
-section .bottom-section-one-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-flow: column nowrap;
-    justify-content: flex-end;
-    padding-left: 20px;
+section .bottom-section-one-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  padding-left: 20px;
 }
-section .bottom-section-one-container .info-buy-container{
-    width: 764px;
-    height: 54px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 20px;
-    font-family: Gotham ;
-    line-height: 28px;
+section .bottom-section-one-container .info-buy-container {
+  width: 764px;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 20px;
+  font-family: Gotham;
+  line-height: 28px;
 }
 
 .tcl-badge-speedometer__dial {
-    height: 21px;
-    width: 40px;
-    position: relative;
+  height: 21px;
+  width: 40px;
+  position: relative;
 }
 
 .tcl-badge-speedometer__inner-circle-wrapper {
-    position: absolute;
-    left: 5px;
-    bottom: 0;
-    width: 30px;
-    height: 19px;
-    color: #eeeeee;
-
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  width: 30px;
+  height: 19px;
+  color: #eeeeee;
 }
 
 .tcl-badge-speedometer__inner-circle {
-    opacity: 0.2;
-    transform: translateZ(0) rotate(0);
-    transform-origin: center bottom;
-    transition-delay: .2s;
+  opacity: 0.2;
+  transform: translateZ(0) rotate(0);
+  transform-origin: center bottom;
+  transition-delay: 0.2s;
 }
 
 .tcl-badge-speedometer__needle {
-    position: absolute;
-    bottom: 0;
-    left: 18px;
-    width: 4px;
-    transform: translateZ(0) rotate(90deg);
-    transform-origin: center bottom;
-    transition: transform 1.733s cubic-bezier(.77,0,.175,1) .2s,-webkit-transform 1.733s cubic-bezier(.77,0,.175,1) .4s;
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  width: 4px;
+  transform: translateZ(0) rotate(90deg);
+  transform-origin: center bottom;
+  transition: transform 1.733s cubic-bezier(0.77, 0, 0.175, 1) 0.2s,
+    -webkit-transform 1.733s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
 }
 
 .speedometer-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
 }
 
-.speedometer-wrapper  span{
-    font-size: 28px;
+.speedometer-wrapper span {
+  font-size: 28px;
 }
 
-.description-text { 
-    font-size: 12px;
-    letter-spacing: 1px;
-    font-family: GothamThin;
-    font-weight: 900;
+.description-text {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-family: GothamThin;
+  font-weight: 900;
 }
-.mph-info{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 1px;
+.mph-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1px;
 }
 
-.range-wrapper{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.range-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .range-wrapper span.range-number {
-    font-size: 30px;
+  font-size: 30px;
 }
 
-.motor-wrapper{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+.motor-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.AWD{
-    font-size: 32px;
+.AWD {
+  font-size: 32px;
 }
 
-.buy-now-button{
-    width: 201px;
-    border: 3px #fff solid;
-    border-radius: 5px;
-    text-align: center;
-    padding: 0 24px;
-    padding-top: 3px;
-    height: 40px;
-    margin-right: 8px;
-    text-decoration: none;
+.buy-now-button {
+  width: 201px;
+  border: 3px #fff solid;
+  border-radius: 5px;
+  text-align: center;
+  padding: 0 24px;
+  padding-top: 3px;
+  height: 40px;
+  margin-right: 8px;
+  text-decoration: none;
 }
 
 .buy-now-button:hover {
-    background-color: #fff;
-    color: #000;
+  background-color: #fff;
+  color: #000;
 }
 
-.down-button-container{
-    height: 82px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
+.down-button-container {
+  height: 82px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
- .down-button-container button{
-    background: transparent;
-    border: none;
-    position: relative;
-    animation-name: upDown;
-    animation-duration:4s;
-    animation-iteration-count:infinite;
- }
+.down-button-container button {
+  background: transparent;
+  border: none;
+  position: relative;
+  animation-name: upDown;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
 
- @keyframes upDown {
-    0%   { bottom:0px;}
-    25%  { bottom:3px;}
-    50%  { bottom:2px;}
-    75%  { bottom:6px;}
-    100% { bottom:1px;}
+@keyframes upDown {
+  0% {
+    bottom: 0px;
   }
+  25% {
+    bottom: 3px;
+  }
+  50% {
+    bottom: 2px;
+  }
+  75% {
+    bottom: 6px;
+  }
+  100% {
+    bottom: 1px;
+  }
+}
 
- .down-button-container button img{
-    width: 27px;
-    filter: brightness(10);
- }
+.down-button-container button img {
+  width: 27px;
+  filter: brightness(10);
+}
+.section-two .side-container {
+    height: 100%;
+    width: 27.5%;
+    display: flex;
+    padding: 48px 55px;
+    flex-direction: column;
+}
+.section-two .side-container span , p{
+    font-family: GothamLight;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.section-two .side-container .side-container-title{
+    font-weight: 607;
+    font-size: 18px;
+    font-stretch: extra-expanded;
+}
+.section-two .side-container .side-container-sub-title{
+    font-weight:900;
+    font-family: Gotham;
+    font-size: 30px;
+}
+
+.section-two .side-container .side-container-link{
+    color: #000;
+    font-family: GothamLight;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: #000 solid 1px;
+    border-spacing: 1px;
+}
