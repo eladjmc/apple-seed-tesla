@@ -72,11 +72,18 @@ nav ul li {
   color: #fff;
 }
 
+
 nav ul li a {
   text-decoration: none;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 nav ul li:hover {
+
   background-color: #555e68;
 }
 
@@ -136,7 +143,9 @@ section.section-one p a {
   border-bottom: 1px solid #fff;
 }
 section.section-one p a:hover {
+  line-height: 20px;
   border-bottom: 2px solid #fff;
+  padding-top: 2px;
 }
 
 .sticky-message {
@@ -421,11 +430,11 @@ section .bottom-section-one-container .info-buy-container {
 }
 
 .page-two-side-buttons-container .learn-more-wrapper .plus-round-button {
-  color: #171A20;
+  color: #000;
   font-family: Gotham;
   font-size: 24px;
   font-weight: 400;
-  border: 3px #171A20 solid;
+  border: 3px #000 solid;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -437,7 +446,7 @@ section .bottom-section-one-container .info-buy-container {
 
 .page-two-side-buttons-container .learn-more-wrapper .plus-round-button:hover{
   color: #fff;
-  background-color: #171A20;
+  background-color: #000;
 }
 
 .page-two-side-buttons-container .learn-more-wrapper .learn-more-link {
