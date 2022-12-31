@@ -15,6 +15,10 @@
   font-family: GothamThin;
   src: url("/assets/fonts/Gotham\ Thin.otf");
 }
+@font-face {
+  font-family: GothamMedium;
+  src: url("/assets/fonts/Gotham\ Medium.otf");
+}
 * {
   margin: 0;
   padding: 0;
@@ -206,7 +210,7 @@ section .bottom-section-one-container .info-buy-container {
   transform: translateZ(0) rotate(90deg);
   transform-origin: center bottom;
   transition: transform 1.733s cubic-bezier(0.77, 0, 0.175, 1) 0.2s,
-    -webkit-transform 1.733s cubic-bezier(0.77, 0, 0.175, 1) 0.4s;
+    -webkit-transform 1.733s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
 .speedometer-wrapper {
@@ -277,7 +281,7 @@ section .bottom-section-one-container .info-buy-container {
   align-items: center;
 }
 
-.down-button-container button {
+.down-button-container a {
   background: transparent;
   border: none;
   position: relative;
@@ -304,7 +308,7 @@ section .bottom-section-one-container .info-buy-container {
   }
 }
 
-.down-button-container button img {
+.down-button-container a img {
   width: 27px;
   filter: brightness(10);
 }
@@ -312,33 +316,136 @@ section .bottom-section-one-container .info-buy-container {
     height: 100%;
     width: 27.5%;
     display: flex;
-    padding: 48px 55px;
+    padding: 48px 52px;
     flex-direction: column;
 }
 .section-two .side-container span , p{
-    font-family: GothamLight;
+    font-family: Gotham;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 20px;
+    color: #393C41;
 }
 
 .section-two .side-container .side-container-title{
-    font-weight: 607;
+    font-weight: 500;
     font-size: 18px;
-    font-stretch: extra-expanded;
+    margin-bottom: 10px;
+    color: #000;
 }
 .section-two .side-container .side-container-sub-title{
     font-weight:900;
     font-family: Gotham;
     font-size: 30px;
+    margin-bottom: 30px;
+    color: #000;
 }
 
 .section-two .side-container .side-container-link{
-    color: #000;
-    font-family: GothamLight;
+    color: #393C41;
+    font-family: Gotham;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
-    border-bottom: #000 solid 1px;
+    border-bottom: #393C41 solid 1px;
     border-spacing: 1px;
+}
+
+.section-two .side-container .explanations {
+  font-family: Gotham;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #393C41;
+}
+.section-two .side-container div p.paragraph-title {
+  font-family: Gotham;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 20px;
+  color: #000;
+  line-height: 0; 
+  margin-top: 3px;
+}
+
+.page-two-side-buttons-container{
+  height: 100%;
+  color: #393C41;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  
+  width: 100%;
+}
+.page-two-side-buttons-container a{
+  color: #393C41;
+}
+.page-two-side-buttons-container .buy-now-wrapper a{
+  color: #000;
+}
+
+.page-two-side-buttons-container .buy-now-wrapper{
+  position: relative;
+
+}
+
+.page-two-side-buttons-container .buy-now-page-two-button {
+  width: 200px;
+  color: #171A20;
+  border: 3px #171A20 solid;
+  font-family: Gotham;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  padding: 8px 24px;
+  height: 40px;
+  margin-right: 8px;
+  text-decoration: none;
+  position:absolute;
+  right: -41px;
+  bottom:0;
+}
+
+.page-two-side-buttons-container .buy-now-page-two-button:hover {
+  background-color: #171A20;
+  color: #fff;
+}
+.learn-more-wrapper{
+  width: 290px;
+  display: flex;
+}
+
+.page-two-side-buttons-container .learn-more-wrapper .plus-round-button {
+  color: #171A20;
+  font-family: Gotham;
+  font-size: 24px;
+  font-weight: 400;
+  border: 3px #171A20 solid;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.page-two-side-buttons-container .learn-more-wrapper .plus-round-button:hover{
+  color: #fff;
+  background-color: #171A20;
+}
+
+.page-two-side-buttons-container .learn-more-wrapper .learn-more-link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-two-side-buttons-container .learn-more-wrapper {
+  gap: 7px;
 }
