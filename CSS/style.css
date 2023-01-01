@@ -606,11 +606,17 @@ a.up-button-navigator {
   display: flex;
   gap: 16px;
 }
+
+.section-three .left-side > .buttons>.learn-more>.icon:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
 .section-three .left-side > .buttons > .learn-more {
   display: flex;
 }
 
-.section-three .left-side > .buttons > .buy-now {
+.section-three .left-side > .buttons  .buy-now {
   border: #000 solid 3px;
   height: 40px;
   width: 204px;
@@ -619,6 +625,12 @@ a.up-button-navigator {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-three .left-side > .buttons > .buy-now:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
 }
 
 .section-three .left-side > .buttons > .buy-now > span {
