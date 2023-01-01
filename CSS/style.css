@@ -319,7 +319,7 @@ section .bottom-section-one-container {
 }
 .section-two .side-container {
   height: 100%;
-  width: 27.5%;
+  width: 28.0%;
   display: flex;
   padding: 48px 52px;
   flex-direction: column;
