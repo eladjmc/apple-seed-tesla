@@ -347,14 +347,17 @@ p {
   color: #000;
 }
 
-.section-two .side-container .side-container-link {
+.side-container-link {
   color: #393c41;
   font-family: Gotham;
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
-  border-bottom: #393c41 solid 1px;
+  border-bottom: #000 solid 1px;
   border-spacing: 1px;
+}
+.side-container-link:hover {
+  border-bottom: #000 solid 2px;
 }
 
 .section-two .side-container .explanations {
@@ -653,27 +656,67 @@ a.up-button-navigator {
 }
 
 .page-navigator {
+  z-index: 999;
   position: fixed;
-  left: 0;
-  top:0;
+  left: 15px;
+  top: 0;
   height: 100%;
   width: 8%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 10px ;
+  align-items: flex-start;
+  gap: 4px;
 }
 
-.page-navigator>div {
-  z-index: 999;
+#third::after {
+  top: 0;
+}
+
+.first-nav-container {
   display: flex;
-  gap:3px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
 }
 
-.page-navigator>div>a{
-  width: 3px;
-  height: 24px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 30%;
+.first-navigator {
+  height: 23px;
+  width: 3.5px;
+  background-color: #fff;
+  box-shadow: 0 1px 0.7px 0 #5b5a5a, 0 1px 0.7px 0 #595858;
+}
+
+.nav-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.generic-navigator {
+  height: 24.5git px;
+  width: 0.8px;
+  background-color: #fff;
+  opacity: 0.2;
+  margin-left: 1.3px;
+}
+
+.hidden {
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: bolder;
+  font-family: GothamBold;
+  opacity: 0.9;
+  display: none;
+}
+
+.generic-navigator:hover + .hidden {
+  display: block;
+}
+
+.first-navigator:hover + .hidden {
+  display: block;
 }
